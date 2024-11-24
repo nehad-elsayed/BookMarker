@@ -1,0 +1,174 @@
+/*************START GLOBAL *********/
+
+
+/**************START FONT FACE ************/
+
+@font-face {
+    font-family: pacifico;
+    src: url('../Fonts/Pacifico/Pacifico-Regular.ttf');
+}
+
+
+@font-face {
+    font-family: rightous;
+    src: url('../Fonts/Righteous/Righteous-Regular.ttf');
+}
+
+@font-face {
+    font-family: "sans-caption-400";
+    src: url('../Fonts/PT_Sans_Caption/PTSansCaption-Regular.ttf');
+}
+
+@font-face {
+    font-family: "sans-caption-700";
+    src: url('../Fonts/PT_Sans_Caption/PTSansCaption-Bold.ttf');
+}
+
+/****************** END FONT FACE  ************/
+
+
+:root {
+
+    --main-color: #FEC260;
+    --main-padding: 30px;
+    --main-margin: 50px;
+}
+
+
+
+*::selection {
+
+    background-color: var(--main-color);
+}
+
+section {
+    background-color: #F7ECDE;
+}
+
+/**************** END GLOBAL *************/
+
+.title {
+
+    padding: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px dotted black;
+    width: 100%;
+    text-align: center;
+}
+
+.title h1 {
+    width: fit-content;
+    margin: auto;
+    font-family: pacifico;
+    margin-top: var(--main-margin);
+    font-size: 3rem;
+    position: relative;
+    z-index: 1;
+
+}
+
+.title h1::after {
+
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    bottom: 0;
+    left: 2px;
+    z-index: -1;
+    background-color: var(--main-color);
+    transition: height 0.5s;
+}
+
+.title h1:hover::after {
+    height: 40px;
+}
+
+.bookmark-body {
+    border-bottom: 2px dotted black;
+    padding-bottom: 30px;
+}
+
+.bookmark-body h2 {
+    font-family: rightous;
+    font-size: 25px;
+    background-clip: text;
+    /* احتياطي للمتصفحات الأخرى */
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    /*يطبق الخلفيه داخل النص فقط*/
+    -webkit-text-fill-color: transparent;
+}
+
+.bookmark-body input {
+    width: 100%;
+    border-color: transparent;
+    outline: none;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.bookmark-body label {
+    font-family: sans-caption-700;
+}
+
+.bookmark-body input:focus {
+    box-shadow: 3px 1px 4px 0px #fec160b6;
+}
+
+.bookmark-body button {
+    background-color: #D1512D;
+    color: white;
+    border-color: transparent;
+    padding: 5px 50px;
+    border-radius: 7px;
+    font-family: sans-caption-400;
+    text-transform: capitalize;
+    transition: background-color 0.5s;
+}
+
+.bookmark-body button:hover {
+
+    background-color: #aa3b1c;
+}
+
+thead {
+    font-family: sans-caption-700;
+}
+
+tbody {
+    font-family: sans-caption-400;
+}
+
+tbody i {
+    background-color: transparent;
+}
+
+/************** MODAL  */
+
+.modal-box {
+    z-index: 999;
+    background-image: linear-gradient(175deg, #00000073, transparent);
+}
+
+.modal-box .circles span {
+
+    width: 20px;
+    height: 20px;
+
+}
+
+.modal-box .circles .one {
+    background-color: rgba(244, 20, 20, 0.752);
+}
+
+.modal-box .circles .two {
+    background-color: rgba(255, 255, 0, 0.747);
+}
+
+
+.modal-box .circles .three {
+    background-color: rgba(0, 128, 0, 0.581);
+}
