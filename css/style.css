@@ -41,8 +41,10 @@
     background-color: var(--main-color);
 }
 
-section {
+
+body {
     background-color: #F7ECDE;
+
 }
 
 /**************** END GLOBAL *************/
