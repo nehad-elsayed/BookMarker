@@ -25,6 +25,8 @@ function addData() {
     localStorage.setItem("sitesContainer", JSON.stringify(siteList));
     displayData();
     clearData();
+  } else {
+    modalBox.classList.remove("d-none");
   }
 }
 //****************** */ END Function ADD ()
@@ -85,13 +87,13 @@ function validationName() {
     siteNameInput.classList.add("is-valid");
     siteNameInput.classList.remove("is-invalid");
 
-    modalBox.classList.add("d-none");
+   
 
     return true;
   } else {
     siteNameInput.classList.remove("is-valid");
     siteNameInput.classList.add("is-invalid");
-    modalBox.classList.remove("d-none");
+    
 
     return false;
   }
@@ -109,13 +111,11 @@ function urlValidation() {
   if (regex.test(textinfo) == true) {
     siteURLInput.classList.add("is-valid");
     siteURLInput.classList.remove("is-invalid");
-    modalBox.classList.add("d-none");
 
     return true;
   } else {
     siteURLInput.classList.remove("is-valid");
     siteURLInput.classList.add("is-invalid");
-    modalBox.classList.remove("d-none");
 
     return false;
   }
